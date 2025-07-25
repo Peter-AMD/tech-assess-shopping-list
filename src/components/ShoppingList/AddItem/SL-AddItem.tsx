@@ -1,4 +1,4 @@
-import React from "react";
+import React, { type CSSProperties } from "react";
 import { PlusOutlined } from "@ant-design/icons";
 import {
   Button,
@@ -31,6 +31,12 @@ const { Option } = Select;
 const itemCommonProps: FormItemProps = {
   labelAlign: "left",
   layout: "vertical",
+};
+
+const itemCommonStyle: CSSProperties = {
+  maxWidth: "180px",
+  width: "100%",
+  textAlign: "left",
 };
 
 const selectAfter = (
@@ -82,32 +88,72 @@ const AddItem: React.FC<AddItemProps> = ({
   };
 
   return (
-    <Form layout="inline" form={form}>
-      <Form.Item {...itemCommonProps} label="Add New Item" name="name">
+    <Form
+      layout="inline"
+      form={form}
+      style={{ display: "flex", justifyContent: "space-between" }}
+    >
+      <Form.Item
+        {...itemCommonProps}
+        label="Add New Item"
+        name="name"
+        style={{ maxWidth: "272px", width: "100%" }}
+      >
         <Input placeholder="Enter Item Name" />
       </Form.Item>
-      <Form.Item {...itemCommonProps} label="Category" name="category">
+      <Form.Item
+        {...itemCommonProps}
+        label="Category"
+        name="category"
+        style={itemCommonStyle}
+      >
         <Select
           defaultValue=""
-          style={{ width: 120 }}
+          style={{ width: "100%" }}
           options={optionsCategories}
         />
       </Form.Item>
-      <Form.Item {...itemCommonProps} label="Sub Category" name="subcategory">
+      <Form.Item
+        {...itemCommonProps}
+        label="Sub Category"
+        name="subcategory"
+        style={itemCommonStyle}
+      >
         <Select
           defaultValue=""
-          style={{ width: 120 }}
+          style={{ width: "100%" }}
           options={optionsSubcategories}
         />
       </Form.Item>
-      <Form.Item {...itemCommonProps} label="Quantity" name="qty">
-        <InputNumber min={0} max={999} defaultValue={0} />
+      <Form.Item
+        {...itemCommonProps}
+        label="Quantity"
+        name="qty"
+        style={itemCommonStyle}
+      >
+        <InputNumber
+          style={{ width: "100%" }}
+          min={0}
+          max={999}
+          defaultValue={0}
+        />
       </Form.Item>
-      <Form.Item {...itemCommonProps} label="Price" name="price">
+      <Form.Item
+        {...itemCommonProps}
+        label="Price"
+        name="price"
+        style={itemCommonStyle}
+      >
         <InputNumber addonAfter={selectAfter} defaultValue={0} />
       </Form.Item>
-      <Form.Item {...itemCommonProps} label="Date" name="date">
+      <Form.Item
+        {...itemCommonProps}
+        label="Date"
+        name="date"
+        style={itemCommonStyle}
+      >
         <DatePicker
+          style={{ width: "100%" }}
           defaultValue={dayjs()}
           format={{
             format: "DD MMM YYYY",

@@ -59,8 +59,12 @@ const TableFilter: React.FC<TableFilterProps> = ({
   };
 
   return (
-    <Flex>
-      <Typography.Text>{dataCount} Items</Typography.Text>
+    <Flex
+      justify="space-between"
+      align="center"
+      style={{ maxHeight: "72px", height: "100%" }}
+    >
+      <Typography.Title level={4}>{dataCount} Items</Typography.Title>
       <Space>
         <Typography.Text>Filter By</Typography.Text>
         <Form layout="inline" form={form} onValuesChange={onChangeFilters}>

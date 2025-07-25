@@ -4,7 +4,11 @@ import { FileExcelOutlined, SearchOutlined } from "@ant-design/icons";
 import type { BaseOptionType } from "antd/es/select";
 import { mkConfig, generateCsv, download } from "export-to-csv";
 
-import type { CategoriesType, DataType, SubcategoriesType } from "../../ShoppingList";
+import type {
+  CategoriesType,
+  DataType,
+  SubcategoriesType,
+} from "../../ShoppingList";
 
 const csvConfig = mkConfig({ useKeysAsHeaders: true });
 
@@ -46,7 +50,7 @@ const TableFilter: React.FC<TableFilterProps> = ({
       label: c,
     }))
   );
-  const dataCount = (filteredData?.length) || 0;
+  const dataCount = filteredData?.length || 0;
   const onChangeFilters = (filter: FilterParam) => {
     filterHandler(filter);
   };
@@ -71,19 +75,23 @@ const TableFilter: React.FC<TableFilterProps> = ({
           <Form.Item name="category">
             <Select
               placeholder="Select Category"
-              style={{ width: 120 }}
+              style={{ maxWidth: 180, width: "100%" }}
               options={optionsCategories}
             />
           </Form.Item>
           <Form.Item name="subcategory">
             <Select
               placeholder="Select Sub Category"
-              style={{ width: 120 }}
+              style={{ maxWidth: 180, width: "100%" }}
               options={optionsSubcategories}
             />
           </Form.Item>
           <Form.Item name="name">
-            <Input placeholder="Search" prefix={<SearchOutlined />} />
+            <Input
+              placeholder="Search"
+              style={{ maxWidth: 180, width: "100%" }}
+              prefix={<SearchOutlined />}
+            />
           </Form.Item>
         </Form>
         <Button

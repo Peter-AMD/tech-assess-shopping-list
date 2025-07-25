@@ -1,6 +1,6 @@
 import { Button, Flex, Form, Input, Select, Space, Typography } from "antd";
 import React from "react";
-import { SearchOutlined } from "@ant-design/icons";
+import { FileExcelOutlined, SearchOutlined } from "@ant-design/icons";
 import type { BaseOptionType } from "antd/es/select";
 import { mkConfig, generateCsv, download } from "export-to-csv";
 
@@ -86,7 +86,11 @@ const TableFilter: React.FC<TableFilterProps> = ({
             <Input placeholder="Search" prefix={<SearchOutlined />} />
           </Form.Item>
         </Form>
-        <Button type="primary" onClick={handleGenerateCSV}>
+        <Button
+          type="default"
+          icon={<FileExcelOutlined />}
+          onClick={handleGenerateCSV}
+        >
           Export Data
         </Button>
       </Space>

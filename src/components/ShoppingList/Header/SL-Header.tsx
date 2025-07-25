@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({ data }) => {
         </Typography.Text>
       </Space>
       <ReportModal open={open} closeModal={closeModal} data={data} />
-      <Button type="primary" icon={<BarChartOutlined />} onClick={openModal}>
+      <Button type="default" icon={<BarChartOutlined />} onClick={openModal}>
         View Report
       </Button>
     </Flex>

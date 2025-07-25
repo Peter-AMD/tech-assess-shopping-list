@@ -108,7 +108,6 @@ const ShoppingList: React.FC = () => {
       });
       return arr;
     });
-    setStateData([...stateData])
   };
 
   const addShoppingItem = (item: FormFields) => {

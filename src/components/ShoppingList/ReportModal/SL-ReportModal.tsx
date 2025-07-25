@@ -45,7 +45,6 @@ const ReportModal: React.FC<ReportModalProps> = ({
   const barData = mapDataToChartData(data);
   const reportCardData = mapDataToReportCard(data);
 
-  console.log("data", data);
   return (
     <Modal
       title="Report"

@@ -15,7 +15,6 @@ const headerStyle: React.CSSProperties = {
   height: 64,
   paddingInline: "13px 24px",
   lineHeight: "64px",
-  backgroundColor: "#202020",
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",
@@ -25,12 +24,11 @@ const contentStyle: React.CSSProperties = {
   minHeight: 120,
   lineHeight: "120px",
   color: "#fff",
-  backgroundColor: "#0958d9",
+  padding: 24,
 };
 const footerStyle: React.CSSProperties = {
   textAlign: "center",
   color: "#fff",
-  backgroundColor: "#4096ff",
 };
 
 const App = () => {

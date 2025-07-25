@@ -19,13 +19,9 @@ const Header: React.FC<HeaderProps> = ({ data }) => {
     setOpen(true);
   };
   return (
-    <Flex
-      style={{ border: "solid 3px yellow" }}
-      justify="space-between"
-      align="center"
-    >
+    <Flex justify="space-between" align="center">
       <Space>
-        <ShoppingCartOutlined style={{ fontSize: 24 }} />
+        <ShoppingCartOutlined style={{ fontSize: 24, color: "#667085" }} />
         <Typography.Text>Shopping List Application</Typography.Text>
       </Space>
       <ReportModal open={open} closeModal={closeModal} data={data} />

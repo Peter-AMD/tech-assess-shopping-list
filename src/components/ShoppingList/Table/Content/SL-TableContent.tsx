@@ -16,7 +16,7 @@ const TableContent: React.FC<TableContentProps> = ({ columns, data }) => {
   ) => {
     console.log("params", pagination, filters, sorter, extra);
   };
-  console.log("content rendered")
+
   return (
     <Table<DataType>
       virtual

@@ -26,6 +26,7 @@ const TableContent: React.FC<TableContentProps> = ({ columns, data }) => {
       dataSource={data}
       onChange={onChange}
       showSorterTooltip={{ target: "sorter-icon" }}
+      style={{ textAlign: "left" }}
     />
   );
 };

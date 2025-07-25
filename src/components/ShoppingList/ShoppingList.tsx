@@ -37,7 +37,7 @@ const columns: TableColumnsType<DataType> = [
     render: (value, record) => {
       return (
         <Space>
-          {value}
+          <strong style={{ fontSize: "16px" }}>{value}</strong>
           {record.status ? <Tag color="blue">{record.status}</Tag> : null}
         </Space>
       );

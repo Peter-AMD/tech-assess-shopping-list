@@ -73,6 +73,8 @@ const AddItem: React.FC<AddItemProps> = ({
       const values = await form.validateFields();
       if (!values.date) {
         addShoppingItem({ ...values, date: dayjs() });
+      } else {
+        addShoppingItem(values);
       }
     } catch (error) {
       console.log("Validation failed", error);

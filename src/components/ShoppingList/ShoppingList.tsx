@@ -1,4 +1,4 @@
-import { Flex, Space, Tag, type TableColumnsType } from "antd";
+import { Divider, Flex, Space, Tag, type TableColumnsType } from "antd";
 import React from "react";
 import Header from "./Header/SL-Header";
 import AddItem, { type FormFields } from "./AddItem/SL-AddItem";
@@ -6,7 +6,12 @@ import Table from "./Table/SL-Table";
 import { collectFieldValues } from "./Table/utils/pick";
 import mockInventory from "@/services/mock-data.json";
 import type { FilterParam } from "./Table/Filter/SL-TableFilter";
-import {categoryFilter, getFilteredData, nameFilter, subcategoryFilter} from "./Table/utils/filter";
+import {
+  categoryFilter,
+  getFilteredData,
+  nameFilter,
+  subcategoryFilter,
+} from "./Table/utils/filter";
 import { mapMockData } from "./Table/utils/map";
 
 export interface DataType {
@@ -89,7 +94,7 @@ const ShoppingList: React.FC = () => {
   const [stateColumns, setStateColumns] =
     React.useState<TableColumnsType<DataType>>(columns);
   const [stateData, setStateData] = React.useState<DataType[]>(data);
-  const filteredData = getFilteredData(stateColumns, stateData)
+  const filteredData = getFilteredData(stateColumns, stateData);
 
   const setColumnsHandler = (filter: FilterParam) => {
     const [filterKey, filterValue] = Object.entries(filter)[0];
@@ -127,12 +132,14 @@ const ShoppingList: React.FC = () => {
 
   return (
     <Flex vertical>
-      <Header data={stateData}/>
+      <Header data={stateData} />
+      <Divider />
       <AddItem
         addShoppingItem={addShoppingItem}
         categories={categories}
         subcategories={subcategories}
       />
+      <Divider />
       <Table
         data={stateData}
         filteredData={filteredData}

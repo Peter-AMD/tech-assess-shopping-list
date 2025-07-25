@@ -23,14 +23,7 @@ type ReportCard = {
   cost: number;
   label: string;
 };
-const dataMock = [
-  // name = name value = total
-  { name: "A", value: 30 },
-  { name: "B", value: 80 },
-  { name: "C", value: 45 },
-  { name: "D", value: 60 },
-  { name: "E", value: 20 },
-];
+
 
 const ReportCard: React.FC<ReportCard> = ({ title, cost, label }) => {
   return (

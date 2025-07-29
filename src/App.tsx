@@ -36,7 +36,7 @@ const footerStyle: React.CSSProperties = {
 
 const App = () => {
   return (
-    <Flex gap="middle" wrap>
+    <Flex gap="middle" wrap style={{ height: "100%" }}>
       <Layout style={layoutStyle}>
         <Header style={headerStyle}>
           <HeaderComponent />

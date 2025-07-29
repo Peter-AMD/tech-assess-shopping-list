@@ -18,6 +18,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  height: 100vh;
+}
+
 * {
   font-family: var(--lato-font-family);
 }

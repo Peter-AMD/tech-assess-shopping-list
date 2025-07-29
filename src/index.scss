@@ -82,7 +82,7 @@ body {
 .sl-table-filter-component {
   h4.ant-typography {
     font-family: var(--lato-font-family);
-    color: #4A4A4A;
+    color: var(--ant-color-text-full);
     font-weight: 700;
     font-size: 20px;
     line-height: 28px;
@@ -90,7 +90,7 @@ body {
 
   .sl-table-filter__filter-label {
     font-family: var(--lato-font-family);
-    color: rgba(0, 0, 0, .65);
+    color: var(--ant-color-text-light);
     font-weight: 700;
     font-size: 14px;
     line-height: 22px;

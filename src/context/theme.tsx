@@ -29,6 +29,7 @@ const lightThemeToken = {
   colorBgGrey: "rgb(249, 250, 251)",
   colorBtnBase: "rgba(0,0,0, .88)",
   colorTextLight: "rgba(0,0,0, .65)",
+  colorTextFull: "#4A4A4A",
 };
 
 const darkThemeToken = {
@@ -36,6 +37,7 @@ const darkThemeToken = {
   colorBgGrey: "#121212",
   colorBtnBase: "rgba(255,255,255, .88)",
   colorTextLight: "rgba(255,255,255, .65)",
+  colorTextFull: "#fff",
 };
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {

@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ data }) => {
       }}
     >
       <Space style={{ gap: "12px" }}>
-        <ShoppingCartIcon />
+        <ShoppingCartIcon style={{ color: "#667085" }} />
         <Typography.Text
           className="shopping-list-header__title"
           style={{
@@ -47,9 +47,9 @@ const Header: React.FC<HeaderProps> = ({ data }) => {
       <ReportModal open={open} closeModal={closeModal} data={data} />
       <Button
         type="default"
-        icon={<ReportBarIcon />}
+        icon={<ReportBarIcon style={{ color: "var(--ant-color-btn-base)" }} />}
         onClick={openModal}
-        style={{ fontWeight: "bold", color: "rgba(0,0,0, .88)" }}
+        style={{ fontWeight: "bold", color: "var(--ant-color-btn-base)" }}
       >
         <span className="lato-font-family">View Report</span>
       </Button>

@@ -28,12 +28,14 @@ const lightThemeToken = {
   colorBgBase: "#fff",
   colorBgGrey: "rgb(249, 250, 251)",
   colorBtnBase: "rgba(0,0,0, .88)",
+  colorTextLight: "rgba(0,0,0, .65)",
 };
 
 const darkThemeToken = {
   colorBgBase: "#000",
   colorBgGrey: "#121212",
   colorBtnBase: "rgba(255,255,255, .88)",
+  colorTextLight: "rgba(255,255,255, .65)",
 };
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {

@@ -144,7 +144,7 @@ body {
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    color: rgba(0, 0, 0, .88);
+    color: var(--ant-color-btn-base);
 
     margin-bottom: 8px;
   }
@@ -164,7 +164,7 @@ body {
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
-    color: rgba(0, 0, 0, .65);
+    color: var(--ant-color-text-light);
   }
 
   .ant-card-body {

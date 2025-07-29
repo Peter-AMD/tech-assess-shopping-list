@@ -1,4 +1,3 @@
-import { BarChartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import { Button, Flex, Space, Typography } from "antd";
 import React from "react";
 import type { DataType } from "../ShoppingList";

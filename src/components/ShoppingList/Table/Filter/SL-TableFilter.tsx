@@ -9,6 +9,7 @@ import type {
   DataType,
   SubcategoriesType,
 } from "../../ShoppingList";
+import ExportDataIcon from "@/assets/icons/export-data";
 
 const csvConfig = mkConfig({ useKeysAsHeaders: true });
 
@@ -18,7 +19,6 @@ export type FilterParam =
   | { search: string };
 
 type TableFilterProps = {
-  // data: DataType[];
   filteredData: DataType[];
   categories: CategoriesType;
   subcategories: SubcategoriesType;
@@ -64,13 +64,21 @@ const TableFilter: React.FC<TableFilterProps> = ({
 
   return (
     <Flex
+      className="sl-table-filter-component"
       justify="space-between"
       align="center"
-      style={{ maxHeight: "72px", height: "100%" }}
+      style={{
+        maxHeight: "72px",
+        height: "100%",
+        padding: "22px 24px",
+        backgroundColor: "var(--ant-color-bg-base)",
+      }}
     >
       <Typography.Title level={4}>{dataCount} Items</Typography.Title>
       <Space>
-        <Typography.Text>Filter By</Typography.Text>
+        <Typography.Text className="sl-table-filter__filter-label">
+          Filter By
+        </Typography.Text>
         <Form layout="inline" form={form} onValuesChange={onChangeFilters}>
           <Form.Item name="category">
             <Select
@@ -96,7 +104,7 @@ const TableFilter: React.FC<TableFilterProps> = ({
         </Form>
         <Button
           type="default"
-          icon={<FileExcelOutlined />}
+          icon={<ExportDataIcon />}
           onClick={handleGenerateCSV}
         >
           Export Data

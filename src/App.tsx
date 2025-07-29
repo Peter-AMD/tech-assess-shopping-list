@@ -9,6 +9,7 @@ const layoutStyle: React.CSSProperties = {
   width: "100%",
   height: "100%",
 };
+
 const headerStyle: React.CSSProperties = {
   textAlign: "center",
   color: "#fff",
@@ -18,14 +19,16 @@ const headerStyle: React.CSSProperties = {
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",
+  backgroundColor: "#202020",
 };
+
 const contentStyle: React.CSSProperties = {
   textAlign: "center",
   minHeight: 120,
   lineHeight: "120px",
   color: "#fff",
-  padding: 24,
 };
+
 const footerStyle: React.CSSProperties = {
   textAlign: "center",
   color: "#fff",

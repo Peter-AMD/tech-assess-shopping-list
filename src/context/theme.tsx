@@ -22,6 +22,18 @@ export const useTheme = (): ThemeContextType => {
 };
 
 
+
+
+const lightThemeToken = {
+  colorBgBase: "#fff",
+  colorBgGrey: "rgb(249, 250, 251)",
+};
+
+const darkThemeToken = {
+  colorBgBase: "#000",
+  colorBgGrey: "#121212",
+};
+
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -34,13 +46,18 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     toggleTheme,
   };
 
+  const darkTheme = {
+    algorithm: theme.darkAlgorithm,
+    token: darkThemeToken,
+  };
+
+  const lightTheme = {
+    algorithm: theme.defaultAlgorithm,
+    token: lightThemeToken,
+  };
   return (
     <ThemeContext.Provider value={contextValue}>
-      <ConfigProvider
-        theme={{
-          algorithm: isDarkMode ? theme.darkAlgorithm : theme.defaultAlgorithm,
-        }}
-      >
+      <ConfigProvider theme={isDarkMode ? darkTheme : lightTheme}>
         {children}
       </ConfigProvider>
     </ThemeContext.Provider>

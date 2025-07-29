@@ -24,14 +24,19 @@ type ReportCard = {
   label: string;
 };
 
-
 const ReportCard: React.FC<ReportCard> = ({ title, cost, label }) => {
   return (
-    <Card style={{ width: "24%" }}>
+    <Card className="report-card" style={{ width: "100%" }}>
       <Flex vertical>
-        <Typography.Text>{title}</Typography.Text>
-        <Typography.Text>${cost.toFixed(2)}</Typography.Text>
-        <Typography.Text>{label}</Typography.Text>
+        <Typography.Text className="report-card__title">
+          {title}
+        </Typography.Text>
+        <Typography.Text className="report-card__cost">
+          ${cost.toFixed(2)}
+        </Typography.Text>
+        <Typography.Text className="report-card__label">
+          {label}
+        </Typography.Text>
       </Flex>
     </Card>
   );
@@ -42,18 +47,20 @@ const ReportModal: React.FC<ReportModalProps> = ({
   open,
   closeModal,
 }) => {
-  const barData = mapDataToChartData(data);
   const reportCardData = mapDataToReportCard(data);
+  const barData = mapDataToChartData(data);
 
   return (
     <Modal
+      className="sl-report-modal-component"
       title="Report"
       open={open}
       onOk={closeModal}
       onCancel={closeModal}
-      width="90vw"
+      width="54vw"
+      footer={null}
     >
-      <Flex justify="space-between">
+      <Flex justify="space-between" gap={24} style={{ marginBottom: "24px" }}>
         {reportCardData?.map((r) => {
           return (
             <ReportCard
@@ -65,13 +72,15 @@ const ReportModal: React.FC<ReportModalProps> = ({
           );
         })}
       </Flex>
+      <Typography.Text className="sl-report-modal-component__title">
+        Sales Report
+      </Typography.Text>
       <ResponsiveContainer width="100%" height={400}>
         <BarChart data={barData}>
-          <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
-          <YAxis />
+          <YAxis tickFormatter={(v) => `$${v}`} />
           <Tooltip />
-          <Bar dataKey="value" fill="#8884d8" />
+          <Bar dataKey="value" fill="#91CAFF" radius={4} />
         </BarChart>
       </ResponsiveContainer>
     </Modal>

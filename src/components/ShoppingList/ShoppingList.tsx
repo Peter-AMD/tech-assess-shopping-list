@@ -133,13 +133,13 @@ const ShoppingList: React.FC = () => {
   return (
     <Flex vertical>
       <Header data={stateData} />
-      <Divider />
+      <Divider style={{ margin: 0 }} />
       <AddItem
         addShoppingItem={addShoppingItem}
         categories={categories}
         subcategories={subcategories}
       />
-      <Divider />
+      <Divider style={{ margin: 0 }} />
       <Table
         data={stateData}
         filteredData={filteredData}

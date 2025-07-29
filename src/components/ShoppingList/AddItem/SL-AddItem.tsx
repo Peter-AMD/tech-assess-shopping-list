@@ -89,9 +89,15 @@ const AddItem: React.FC<AddItemProps> = ({
 
   return (
     <Form
+      className="add-item-component"
       layout="inline"
       form={form}
-      style={{ display: "flex", justifyContent: "space-between" }}
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        padding: "24px 40px",
+        backgroundColor: "var(--ant-color-bg-grey)",
+      }}
     >
       <Form.Item
         {...itemCommonProps}

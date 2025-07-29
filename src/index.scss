@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --montserrat-font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --inter-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --lato-font-family: 'Lato', sans-serif;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+  'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  'Noto Color Emoji';
+  line-height: 1.5;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: var(--lato-font-family);
+}
+
+.shopping-list-header__title {
+  font-family: var(--montserrat-font-family); 
+}
+
+.proxima-font-family {
+  font-family: var(--montserrat-font-family); 
+}
+
+.lato-font-family {
+  font-family: var(--lato-font-family); 
+}
+
+.ant-switch:not(.ant-switch-disabled) {
+  background: rgba(226, 226, 226, .25);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.add-item-component {
+  label {
+    font-family: var(--lato-font-family);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0;
+  }
+
+  input::placeholder {
+    font-family: var(--lato-font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .ant-input-number-group-addon {
+    background-color: var(--ant-color-bg-grey);
+  }
+
+  .ant-btn {
+    span {
+      font-family: var(--lato-font-family);
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0;
+    }
+  }
+}
+
+.sl-table-filter-component {
+  h4.ant-typography {
+    font-family: var(--lato-font-family);
+    color: #4A4A4A;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .sl-table-filter__filter-label {
+    font-family: var(--lato-font-family);
+    color: rgba(0, 0, 0, .65);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .ant-select-selection-wrap {
+    .ant-select-selection-placeholder, input::placeholder {
+      font-family: var(--lato-font-family);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  .ant-btn {
+    span {
+      font-family: var(--lato-font-family);
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}
+
+.sl-report-modal-component {
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .ant-modal-header {
+    .ant-modal-title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .ant-modal-header {
+    margin-bottom: 20px;
+  }
+}
+
+.report-card {
+  &__title {
+    font-family: var(--lato-font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, .88);
+
+    margin-bottom: 8px;
+  }
+
+  &__cost {
+    font-family: var(--montserrat-font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #1677FF;
+
+    margin-bottom: 16px;
+  }
+
+  &__label {
+    font-family: var(--lato-font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, .65);
+  }
+
+  .ant-card-body {
+    padding: 16px;
+  }
+}

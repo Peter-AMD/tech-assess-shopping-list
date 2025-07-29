@@ -5,6 +5,10 @@ import { useTheme } from "@/context/theme";
 const TextStyles: React.CSSProperties = {
   color: "#fff",
   height: "fit-content",
+  fontWeight: 500,
+  fontSize: "14px",
+  lineHeight: "20px",
+  letterSpacing: 0,
 };
 
 const Header: React.FC = () => {
